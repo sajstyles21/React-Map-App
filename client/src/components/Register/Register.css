@@ -1,0 +1,84 @@
+.registerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  z-index: 999999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.registerBox {
+  border: 1px solid #000;
+  padding: 20px;
+  margin: auto;
+  background-color: cornflowerblue;
+  -webkit-box-shadow: 7px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 7px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.cross {
+  display: flex;
+  justify-content: right;
+  margin: 0;
+  font-size: x-large;
+  cursor: pointer;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+label {
+  font-size: large;
+  font-weight: 500;
+  color: #000;
+}
+
+span {
+  font-weight: 500;
+  color: #000;
+}
+
+.added {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+.input-class {
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 250px;
+  height: 5px;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.text-class {
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 250px;
+  height: 50px;
+  padding: 10px;
+}
+
+.submit {
+  border: none;
+  background-color: lightgray;
+  color: #000;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 900;
+}

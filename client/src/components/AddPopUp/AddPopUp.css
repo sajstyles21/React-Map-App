@@ -1,0 +1,59 @@
+.mapContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+label {
+  font-size: large;
+  font-weight: 500;
+  color: tomato;
+}
+
+span {
+  font-weight: 500;
+  color: #000;
+}
+
+.added {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+.input-class {
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 250px;
+  height: 5px;
+  padding: 10px;
+}
+
+.text-class {
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 250px;
+  height: 50px;
+  padding: 10px;
+}
+
+.submit {
+  border: none;
+  background-color: lightgray;
+  color: tomato;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 900;
+}

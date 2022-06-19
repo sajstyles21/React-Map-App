@@ -1,0 +1,33 @@
+.mapContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+label {
+  font-size: large;
+  font-weight: 500;
+  color: tomato;
+}
+
+span {
+  font-weight: 500;
+  color: #000;
+}
+
+.added {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-top: 20px;
+}

@@ -94,7 +94,6 @@ export const weatherInfo = async (lat, lng) => {
   const response = await axios.get(
     `https://api.weatherapi.com/v1/current.json?key=9da24fc7125c4a88b9195707221806&q=${lat},${lng}&aqi=no`
   );
-
   return response.data;
 };
 

@@ -2,7 +2,6 @@ import axios from "axios";
 import jwt_decode from "jwt-decode";
 
 //const BASE_URL = "http://localhost:5500/api/";
-
 const BASE_URL = "https://pin-on-map.herokuapp.com/api/";
 
 const authRequest = axios.create({

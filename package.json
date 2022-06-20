@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "16.13.0"
+  },
   "scripts": {
-    "start": "nodemon index.js",
-    "dev": "node index.js"
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build:production"
   },
   "author": "Suraj Sharma",
   "license": "ISC",

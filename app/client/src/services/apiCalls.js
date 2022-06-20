@@ -9,7 +9,6 @@ const authRequest = axios.create({
 });
 
 //Axios Interceptors
-
 authRequest.interceptors.request.use(
   async (config) => {
     const currentDate = new Date();

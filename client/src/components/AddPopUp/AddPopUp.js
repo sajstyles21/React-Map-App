@@ -4,6 +4,8 @@ import "./AddPopUp.css";
 import { useMutation, useQueryClient } from "react-query";
 import { addPin } from "../../services/apiCalls";
 import { useEffect } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const AddPopUp = (props) => {
   const [data, setData] = useState({
@@ -15,7 +17,29 @@ const AddPopUp = (props) => {
     long: "",
     userId: "",
   });
-  const [message, setMessage] = useState("");
+
+  const notifySuccess = (message) =>
+    toast.success(message, {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
+
+  const notifyError = (error) =>
+    toast.error(error, {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
+
   const query = useQueryClient();
 
   const handleRating = (ratingNumber) => {
@@ -46,11 +70,11 @@ const AddPopUp = (props) => {
         userId: "",
       });
     };
-  }, [props.lat, props.long, props?.user?._id, message]);
+  }, [props.lat, props.long, props?.user?._id]);
 
-  const { mutate, isLoading } = useMutation(addPin, {
+  const { mutate, mutateAsync, isLoading } = useMutation(addPin, {
     onSuccess: (res) => {
-      setMessage("Pin Added Successfully");
+      notifySuccess("Pin Added Successfully");
       setData({
         name: "",
         desc: "",
@@ -61,14 +85,14 @@ const AddPopUp = (props) => {
       query.invalidateQueries("pins");
     },
     onError: (error) => {
-      setMessage(error.message.data);
+      notifyError(error.message.data);
     },
     onSettled: (res, error) => {},
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    mutate({ data });
+    mutateAsync({ data });
   };
 
   return (
@@ -118,9 +142,6 @@ const AddPopUp = (props) => {
             className="input-class"
           />
         </div>
-        {message && (
-          <p style={{ textAlign: "center", marginTop: "10px" }}>{message}</p>
-        )}
         <div className="box">
           <button type="submit" className="submit">
             {isLoading ? "Submitting..." : "Submit"}

@@ -83,6 +83,7 @@ const AddPopUp = (props) => {
             name="name"
             type="text"
             value={data.name}
+            autoComplete="off"
             onChange={handleChange}
             placeholder="Add name"
             className="input-class"
@@ -113,6 +114,7 @@ const AddPopUp = (props) => {
             name="tags"
             type="text"
             value={data.tags}
+            autoComplete="off"
             onChange={handleChange}
             placeholder="Add tags"
             className="input-class"

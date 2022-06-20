@@ -6,7 +6,6 @@ import { addPin } from "../../services/apiCalls";
 import { useEffect } from "react";
 
 const AddPopUp = (props) => {
-  const [rate, setRate] = useState(0);
   const [data, setData] = useState({
     name: "",
     desc: "",
@@ -20,7 +19,6 @@ const AddPopUp = (props) => {
   const query = useQueryClient();
 
   const handleRating = (ratingNumber) => {
-    setRate(ratingNumber);
     setData({ ...data, rating: ratingNumber });
   };
 

@@ -1,5 +1,4 @@
 const express = require("express");
-const router = require("express").Router();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
@@ -19,16 +18,6 @@ app.use(cors());
 
 app.use("/api/auth", authRoute);
 app.use("/api/pin", pinRoute);
-
-router.get("/", (req, res) => {
-  res.status(200).json("hello");
-});
-
-app.use(express.static("app/client/build"));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "app/client/build", "index.html"));
-});
 
 const PORT = process.env.PORT || 5500;
 

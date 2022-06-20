@@ -3,14 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": {
-    "node": "16.13.0"
-  },
   "scripts": {
-    "start": "node index.js",
-    "heroku-postbuild": "cd app && cd client && npm install --only=dev && npm install && npm run build"
+    "start": "nodemon index.js",
+    "dev": "node index.js"
   },
-  "author": "",
+  "author": "Suraj Sharma",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2",
